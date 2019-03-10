@@ -1,10 +1,19 @@
 #include "mbed.h"
 #include "Data.h"
 
+#include "State.h"
+#include "Apogee.h"
 #include "PreFlight.h"
+#include "Separation.h"
 #include "PoweredAscent.h"
-#include "CoastAscent.h"
-
+#include "CoastAscent1.h"
+#include "CoastAscent2.h"
+#include "CoastDescent.h"
+#include "DrogueDeploy.h"
+#include "DrogueDescent.h"
+#include "MainDeploy.h"
+#include "MainDescent.h"
+#include "PostFlight.h"
 
 int main()
 {
@@ -12,10 +21,34 @@ int main()
 	int stateNum = 0;
 
 	PreFlight preFlight;
-	PoweredAscent poweredAscent;
-	CoastAscent coastAscent;
+	PoweredAscent poweredAscent1;
+	Separation separation;
+	CoastAscent1 coastAscent1;
+	PoweredAscent poweredAscent2;
+	CoastAscent2 coastAscent2;
+	Apogee apogee;
+	CoastDescent coastDescent;
+	DrogueDeploy drogueDeploy;
+	DrogueDescent drogueDescent;
+	MainDeploy mainDeploy;
+	MainDescent mainDescent;
+	PostFlight postFlight;
 
-	State states[] = {preFlight, poweredAscent, coastAscent};
+
+	State states[] = {preFlight,
+					  poweredAscent1,
+					  separation,
+					  coastAscent1,
+					  poweredAscent2,
+					  coastAscent2,
+					  apogee,
+					  coastDescent,
+					  drogueDeploy,
+					  drogueDescent,
+					  mainDeploy,
+					  mainDescent,
+					  postFlight};
+
 
     while(1) {
         

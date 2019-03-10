@@ -1,24 +1,23 @@
 /*
- * CoastAscent.cpp
+ * MainDeploy.cpp
  *
  *  Created on: Mar 9, 2019
  *      Author: Adam Mirza
  */
 
-#include "CoastAscent.h"
+#include "MainDeploy.h"
 
-CoastAscent::CoastAscent() {
+MainDeploy::MainDeploy() {
 	// TODO Auto-generated constructor stub
 
 }
 
-CoastAscent::~CoastAscent() {
+MainDeploy::~MainDeploy() {
 	// TODO Auto-generated destructor stub
 }
 
-int CoastAscent::run(Data *data){
+int MainDeploy::run(Data *data) {
 
 	return 0;
 
 }
-
