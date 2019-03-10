@@ -1,16 +1,19 @@
 #include "mbed.h"
+#include "Data.h"
 
-
-DigitalOut led(LED1);
 
 int main()
 {
+	Data data;
 
     while(1) {
         
-        wait(1); // 1 second
-        led = !led; // Toggle LED
-        
+        data.getData();
+        data.processData();
+
+        wait_ms(50);
+        printf("%f\r\n", data.x(0));
+
     }
 
 }
