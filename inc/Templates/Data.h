@@ -31,6 +31,7 @@ public:
 
 	void getData(void);
 	void processData(void);
+	void logData(void);
 
 	Eigen::Quaterniond q;
 	Eigen::VectorXd x;

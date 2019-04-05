@@ -19,7 +19,6 @@ GPS gpsData;
 
 
 Data::Data() {
-
 	x.resize(6);
 	z.resize(15);
 
@@ -71,5 +70,10 @@ void Data::processData() {
 	// run filters AHRS, then UKF
 
 	x(0) = z(0);
+
+}
+
+
+void Data::logData(){ //Logs output from sensors to SD Card
 
 }

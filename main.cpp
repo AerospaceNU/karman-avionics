@@ -1,5 +1,6 @@
 #include "mbed.h"
 #include "Data.h"
+#include "SD/SD.h"
 
 #include "State.h"
 #include "Apogee.h"
@@ -15,10 +16,14 @@
 #include "MainDescent.h"
 #include "PostFlight.h"
 
+#include "SDFileSystem.h"
+
 int main()
 {
 	Data data;
 	int stateNum = 0;
+
+	SD sd;
 
 	PreFlight preFlight;
 	PoweredAscent poweredAscent1;
